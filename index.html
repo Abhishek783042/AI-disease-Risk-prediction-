@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Disease Risk Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI Disease Risk Prediction</h1>
+
+        <p class="subtitle">
+            Enter patient information to estimate diabetes risk
+        </p>
+
+        <form id="predictionForm">
+
+            <div class="form-grid">
+
+                <div>
+                    <label>Pregnancies</label>
+                    <input type="number" id="pregnancies" required>
+                </div>
+
+                <div>
+                    <label>Glucose</label>
+                    <input type="number" id="glucose" required>
+                </div>
+
+                <div>
+                    <label>Blood Pressure</label>
+                    <input type="number" id="bloodPressure" required>
+                </div>
+
+                <div>
+                    <label>Skin Thickness</label>
+                    <input type="number" id="skinThickness" required>
+                </div>
+
+                <div>
+                    <label>Insulin</label>
+                    <input type="number" id="insulin" required>
+                </div>
+
+                <div>
+                    <label>BMI</label>
+                    <input type="number" step="0.1" id="bmi" required>
+                </div>
+
+                <div>
+                    <label>Diabetes Pedigree Function</label>
+                    <input type="number" step="0.001"
+                           id="diabetesPedigreeFunction" required>
+                </div>
+
+                <div>
+                    <label>Age</label>
+                    <input type="number" id="age" required>
+                </div>
+
+            </div>
+
+            <button type="submit">
+                Analyze Risk
+            </button>
+
+        </form>
+
+
+        <div id="result" class="result">
+
+            <h2>Prediction Result</h2>
+
+            <p id="resultText">Enter values and click Analyze Risk.</p>
+
+            <p id="riskScore"></p>
+
+        </div>
+
+        <p class="warning">
+            This system is for educational purposes only and is not a medical diagnosis.
+        </p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
