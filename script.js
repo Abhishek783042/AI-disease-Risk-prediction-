@@ -44,18 +44,18 @@ form.addEventListener("submit", async function (event) {
     try {
 
         // Send data to FastAPI
-        const response = await fetch(
-            "http://127.0.0.1:8000/predict",
-            {
-                method: "POST",
+       const response = await fetch(
+    "https://ai-disease-risk-prediction-api.onrender.com/predict",
+    {
+        method: "POST",
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-                body: JSON.stringify(data)
-            }
-        );
+        body: JSON.stringify(data)
+    }
+);
 
 
         if (!response.ok) {
